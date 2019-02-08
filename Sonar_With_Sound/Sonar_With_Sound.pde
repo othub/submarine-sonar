@@ -169,6 +169,22 @@ void draw() {
   line(0, 0, getCosLine(885, angulo), getSinLine(-885, angulo));
 
   popMatrix();
+  
+  //____________P U N T O_________//
+  pushMatrix();
+
+  translate(DIMENSION_X, DIMENSION_Y);
+  strokeWeight(30);
+  stroke(255, 0, 0);
+  if (distancia >= 4 && distancia < 42) {
+    point(getCosLine((int)(distancia*22.45), angulo), getSinLine(-(int)(distancia*22.45), angulo));
+  } 
+  //distancia de peligro 
+  else if (distancia < 4) {
+    danger.trigger();
+  }
+
+  popMatrix();
 
 }
 
