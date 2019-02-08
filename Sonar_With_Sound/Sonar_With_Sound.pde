@@ -158,6 +158,18 @@ void draw() {
   resetMatrix();
 
   popMatrix();
+  
+  
+  //___________________L I N E A __ M O V I E N D O___________________//
+  pushMatrix();
+
+  strokeWeight(10);
+  stroke(112, 127, 150);
+  translate(DIMENSION_X, DIMENSION_Y);
+  line(0, 0, getCosLine(885, angulo), getSinLine(-885, angulo));
+
+  popMatrix();
+
 }
 
 void serialEvent (Serial p) {
